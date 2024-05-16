@@ -25,12 +25,12 @@
 <table>
     <thead>
         <tr>
-            <th>TSSOP20</th>
-            <th>QFN28</th>
-            <th>LQFP48</th>
-            <th>LQFP64</th>
-            <th>QFN68</th>
-            <th>LQFP100</th>
+            <th>TSSOP<br>20</th>
+            <th>QFN<br>28</th>
+            <th>LQFP<br>48</th>
+            <th>LQFP<br>64</th>
+            <th>QFN<br>68</th>
+            <th>LQFP<br>100</th>
             <th>Pin name</th>
             <th>Pin type</th>
             <th>I/O<br>structure</th>
