@@ -1,4 +1,4 @@
-# CH32V303/CH32V307
+# CH32V303/CH32V307(CH32V305)
 
 | SWCLK | SWDIO | TX1  | RX1  | TX2  | RX2  | TX3  | RX3  | TX4  | RX4  | TX5  | RX5  | TX6  | RX6  | TX7  | RX7  |
 |-------|-------|------|------|------|------|------|------|------|------|------|------|------|------|------|------|
@@ -10,7 +10,6 @@
 - https://www.wch-ic.com/products/CH32V307.html
 - https://www.wch.cn/products/CH32V303.html
 - https://www.wch.cn/products/CH32V307.html
-
 
 ## System Block Diagram
 <img src="image/system_CH32V303.png" />
