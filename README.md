@@ -11,6 +11,10 @@
 - https://www.wch.cn/products/CH32V303.html
 - https://www.wch.cn/products/CH32V307.html
 
+## Datasheet
+- en [[CH32V20x_30xDS0.PDF](https://ch32-riscv-ug.github.io/CH32V307/datasheet_en/CH32V20x_30xDS0.PDF)] [[CH32FV2x_V3xRM.PDF](https://ch32-riscv-ug.github.io/CH32V307/datasheet_en/CH32FV2x_V3xRM.PDF)]
+- zh [[CH32V20x_30xDS0.PDF](https://ch32-riscv-ug.github.io/CH32V307/datasheet_zh/CH32V20x_30xDS0.PDF)] [[CH32FV2x_V3xRM.PDF](https://ch32-riscv-ug.github.io/CH32V307/datasheet_zh/CH32FV2x_V3xRM.PDF)]
+
 ## System Block Diagram
 <img src="image/system_CH32V303.png" />
 <img src="image/system_CH32V307.png" />
