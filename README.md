@@ -29,16 +29,16 @@
 <table>
     <thead>
         <tr>
-            <th>TSSOP<br>20</th>
-            <th>QFN<br>28</th>
-            <th>LQFP<br>48</th>
-            <th>LQFP<br>64</th>
-            <th>QFN<br>68</th>
-            <th>LQFP<br>100</th>
+            <th>TSSOP&#8203;20</th>
+            <th>QFN&#8203;28</th>
+            <th>LQFP&#8203;48</th>
+            <th>LQFP&#8203;64</th>
+            <th>QFN&#8203;68</th>
+            <th>LQFP&#8203;100</th>
             <th>Pin name</th>
             <th>Pin type</th>
-            <th>I/O<br>structure</th>
-            <th>Main function<br>(after reset)</th>
+            <th>I/O structure</th>
+            <th>Main function&#8203;(after reset)</th>
             <th>Note</th>
         </tr>
     </thead>
