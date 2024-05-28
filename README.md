@@ -291,7 +291,8 @@
             <td>PB2</td>
             <td>I/O</td>
             <td>FT</td>
-            <td colspan="2">PB2/BOOT1</td>
+            <td>PB2/BOOT1</td>
+            <td></td>
         </tr>
         <tr>
             <td>-</td>
