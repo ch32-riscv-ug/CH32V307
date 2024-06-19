@@ -1090,5 +1090,32 @@
     </tbody>
 </table>
 
+## Errata
+- SDIO_D0 and SDIO_D1 are mapped to PC8 and PC9 by default. only for products with the penultimate
+digit of the lot number greater than 1, the default mapping of SDIO_D0 and SDIO_D1 is automatically changed
+to PB14 and PB15 when bit[14]ETHMACEN=1 and bit[10]SDIOEN=1 in register RCC_AHBPCENR.
+
+- DVP_D5 is mapped to PB6 by default. only for products with the penultimate digit of the lot number
+greater than 1, when bit[13]DVPEN=1 and bit[11]USBHSEN=1 of register RCC_AHBPCENR and
+bit[2]RB_UC_RST_SIE=0 of R8_USB_CTRL, the default mapping for DVP_D5 is changed to PB3
+automatically.
+
+- FSMC_NADV default maps to PB7. only for products with the penultimate digit of the lot number greater
+than 1, when register RCC_AHBPCENR's bit[8]FSMCEN=1 and bit[11]USBHSEN=1 and R8_USB_CTRL's
+bit[2]RB_UC_RST_SIE=0, the default FSMC_NADV mapping is automatically changed to PD2.
+
+- I2S3_SD is mapped to PB5 by default. only for products with the penultimate digit of the lot number
+greater than 2. The I2S3_SD default mapping is automatically changed to PA9 if both 10M Ethernet and I2S3
+functionality are used.
+
+- I2S3_MCK is mapped to PC7 by default. only for products with the penultimate digit of the lot number
+greater than 2. The I2S3_MCK default mapping is automatically changed to PA8 if both 10M Ethernet and I2S3
+functions are used.
+
+- SPI3_MOSI is mapped to PB5 by default, only for the product with the penultimate fifth digit of the lot
+number being 2. When Ethernet is used, the I2S3 default pin function is unavailable, and the chip select signal
+of the SPI3 default pin is unavailable, and the SPI3_MOSI default mapping is automatically changed to PA15
+at this time. 
+
 ## System Architecture
 <img src="image/architecture_CH32V307.png" />
