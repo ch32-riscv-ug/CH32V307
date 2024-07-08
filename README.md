@@ -8,6 +8,16 @@
 |------|------|------|------|------|------|------|------|
 | PC12 | PD2  | PC0  | PC1  | PC2  | PC3  | PC4  | PC5  |
 
+Pin Alternate Functions
+[[ALL](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307)]
+[[ADC](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=ADC)]
+[[I2C](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=I2C)]
+[[SPI](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=SPI)]
+[[SYS](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=SYS)]
+[[TIM](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=TIM)]
+[[UART/USART](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=ART)]
+[[USB](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V307&features=USB)]
+
 ## Official Site
 
 - https://www.wch-ic.com/products/CH32V303.html
