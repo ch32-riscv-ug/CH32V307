@@ -1,7 +1,54 @@
-<html>
-<head><title>502 Bad Gateway</title></head>
-<body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,maximum-scale=1,user-scalable=1"><link rel="icon" href="/favicon.ico"><title>产品中心 - 南京沁恒微电子股份有限公司</title><script>window._CONFIG = {};
+      window._CONFIG['domianURL'] = 'https://api3.wch.cn'
+      // window._CONFIG['domianURL'] = 'http://192.168.111.189:6002'
+      window._CONFIG['pageTitle'] = ' - 南京沁恒微电子股份有限公司'//详情页标题</script><link href="/css/chunk-09a7de75.734fd238.css" rel="prefetch"><link href="/css/chunk-0e0c7a8c.1eb11ca8.css" rel="prefetch"><link href="/css/chunk-1180c494.77215494.css" rel="prefetch"><link href="/css/chunk-1391b78a.af0d99f5.css" rel="prefetch"><link href="/css/chunk-139f1682.dc92c380.css" rel="prefetch"><link href="/css/chunk-1502d02e.c8a42eb0.css" rel="prefetch"><link href="/css/chunk-23c7ad71.d675d0a6.css" rel="prefetch"><link href="/css/chunk-24f7338c.d2381b7d.css" rel="prefetch"><link href="/css/chunk-2a9ed8b2.02379db4.css" rel="prefetch"><link href="/css/chunk-3641cba2.9b969140.css" rel="prefetch"><link href="/css/chunk-390df010.e2d2ed1f.css" rel="prefetch"><link href="/css/chunk-5fecf562.6fcd7b4d.css" rel="prefetch"><link href="/css/chunk-6aa9a60a.7908f84d.css" rel="prefetch"><link href="/css/chunk-75f60260.15746242.css" rel="prefetch"><link href="/css/chunk-77d6e5e6.e65254b5.css" rel="prefetch"><link href="/css/chunk-795a8c1c.6bac537a.css" rel="prefetch"><link href="/css/chunk-7a94fdfd.d80ec15e.css" rel="prefetch"><link href="/css/chunk-a64a2408.18051d6c.css" rel="prefetch"><link href="/css/chunk-e5c9da58.2c86efbf.css" rel="prefetch"><link href="/js/chunk-09a7de75.f04e3b12.js" rel="prefetch"><link href="/js/chunk-0e0c7a8c.bbeba1c1.js" rel="prefetch"><link href="/js/chunk-1180c494.a30a4fc6.js" rel="prefetch"><link href="/js/chunk-1391b78a.ebb1d7d7.js" rel="prefetch"><link href="/js/chunk-139f1682.3f9977fd.js" rel="prefetch"><link href="/js/chunk-1502d02e.c4821a48.js" rel="prefetch"><link href="/js/chunk-23c7ad71.ff2dd07f.js" rel="prefetch"><link href="/js/chunk-24f7338c.7ee0ea73.js" rel="prefetch"><link href="/js/chunk-2a9ed8b2.495d2359.js" rel="prefetch"><link href="/js/chunk-2d22c089.f22c2709.js" rel="prefetch"><link href="/js/chunk-3641cba2.30979f74.js" rel="prefetch"><link href="/js/chunk-390df010.a2cb1aed.js" rel="prefetch"><link href="/js/chunk-578f79b9.cc290e71.js" rel="prefetch"><link href="/js/chunk-5fecf562.e1df004b.js" rel="prefetch"><link href="/js/chunk-6aa9a60a.14a0463f.js" rel="prefetch"><link href="/js/chunk-75f60260.bff35b98.js" rel="prefetch"><link href="/js/chunk-77d6e5e6.3920a734.js" rel="prefetch"><link href="/js/chunk-795a8c1c.20ba13ec.js" rel="prefetch"><link href="/js/chunk-7a94fdfd.65304bdc.js" rel="prefetch"><link href="/js/chunk-a64a2408.e11c7906.js" rel="prefetch"><link href="/js/chunk-e5c9da58.872818ee.js" rel="prefetch"><link href="/css/app.53ab48d8.css" rel="preload" as="style"><link href="/css/chunk-vendors.66b8a5ce.css" rel="preload" as="style"><link href="/js/app.c61a74b3.js" rel="preload" as="script"><link href="/js/chunk-vendors.987d5b14.js" rel="preload" as="script"><link href="/css/chunk-vendors.66b8a5ce.css" rel="stylesheet"><link href="/css/app.53ab48d8.css" rel="stylesheet"></head><style>body{
+      margin:0px;
+    }</style><body><noscript><strong>We're sorry but wch123 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/chunk-vendors.987d5b14.js"></script><script src="/js/app.c61a74b3.js"></script></body><script>var ie = IEVersion();
+    console.log('ie====',ie)
+    if (ie ) {//原：8
+      alert("为了您的浏览体验，建议您使用最新版本的谷歌浏览器。")
+      // var r=alert("您当前浏览器版本过低，为了您的浏览体验，请升级浏览器或使用最新版本的谷歌浏览器。")
+      // if(r){
+      //   return
+      // }
+    }
+    function IEVersion() {
+      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      var isIE = userAgent.indexOf(".NET") > -1 ; //判断是否IE<11浏览器
+      // var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+      // var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+      if (isIE) {
+        return true
+      //   var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+      //   reIE.test(userAgent);
+      //   var fIEVersion = parseFloat(RegExp["$1"]);
+      //   console.log(fIEVersion)
+      //   if (fIEVersion == 7) {
+      //     return 7;
+      //   } else if (fIEVersion == 8) {
+      //     return 8;
+      //   } else if (fIEVersion == 9) {
+      //     return 9;
+      //   } else if (fIEVersion == 10) {
+      //     return 10;
+      //   } else {
+      //     return 6;//IE版本<=7
+      //   }
+      // } else if (isEdge) {
+      //   return 'edge';//edge
+      // } else if (isIE11) {
+      //   return 11; //IE11
+      // } else {
+      //   return 15;//不是ie浏览器
+      // }
+    }else{
+      return false
+    }
+  
+    // screenResolution()
+    // function screenResolution(){
+    //   // console.log('分辨率宽度：',window.screen.width)
+    //   if(window.screen.width < 1360){
+    //     alert('您当前设备屏幕分辨率过低，为了您的浏览体验，请更换分辨率更高的设备。')
+    //   }
+    }</script></html>
