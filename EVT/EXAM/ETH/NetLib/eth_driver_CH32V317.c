@@ -337,7 +337,6 @@ void ETH_SetClock(void)
     RCC_PLL3Cmd(DISABLE);
     RCC_PREDIV2Config(RCC_PREDIV2_Div1); // HSE = 8M
     RCC_PLL3Config(RCC_PLL3Mul_12_5); // 8M*12.5 = 100MHz
-    RCC_MCOConfig(RCC_MCO_PLL3CLK);
     RCC_PLL3Cmd(ENABLE);
     while(RESET == RCC_GetFlagStatus(RCC_FLAG_PLL3RDY));
     Delay_Us(300);//Wait for the PHY clock to stabilize

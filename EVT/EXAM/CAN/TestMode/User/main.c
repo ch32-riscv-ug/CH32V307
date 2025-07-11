@@ -2,7 +2,7 @@
 * File Name          : main.c
 * Author             : WCH
 * Version            : V1.0.1
-* Date               : 2025/04/11
+* Date               : 2025/07/07
 * Description        : Main program body.
 *********************************************************************************
 * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -351,6 +351,12 @@
      CAN_FilterInitSturcture.CAN_FilterActivation = ENABLE;
  
  #ifdef USE_SOFT_FILTER
+    (*(__IO uint32_t *)(0x40006600)) |= 0x1; 	
+    (*(__IO uint32_t *)(0x4000660C)) |= 0x3;	
+    (*(__IO uint32_t *)(0x40006640)) = 0;	
+    (*(__IO uint32_t *)(0x40006644)) = 0;	
+    (*(__IO uint32_t *)(0x4000661C)) |= 0x3;	
+    (*(__IO uint32_t *)(0x40006600)) &= ~0x1; 	
      CAN_SoftFilterInit( &CAN_FilterInitSturcture );
      CAN_SoftSlaveStartBank(1);
  #else

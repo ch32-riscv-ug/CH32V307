@@ -165,7 +165,7 @@ extern void USB2ETH_Trance( void );
 extern void ETH2USB_Trance( void );
 extern void ECM_Load_Status( void );
 extern uint8_t ETH2USB_DataSend(uint16_t len, uint32_t *pBuff );
-extern void ECM_Change_MAC_Filter( uint8_t pac_filter );
+extern void MAC_Filter_Set( uint8_t pac_filter );
 extern void MACAddr_Change_To_SNDesc( uint8_t *pmacbuf );
 extern void ETH_GetMacAddr( uint8_t *p );
 extern void ETH_DriverInit( uint8_t *addr );

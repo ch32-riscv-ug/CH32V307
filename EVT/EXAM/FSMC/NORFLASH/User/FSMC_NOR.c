@@ -2,7 +2,7 @@
  * File Name          : FSMC_NOR.c
  * Author             : WCH
  * Version            : V1.0.1
- * Date               : 2025/04/13
+ * Date               : 2025/07/04
  * Description        : This file contains the headers of the FSMC_NOR.
 *********************************************************************************
 * Copyright (c) 2024 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -98,7 +98,7 @@ void FSMC_NorFlash_Init(void)
     FSMC_NORSRAMInitStructure.FSMC_WaitSignalActive = FSMC_WaitSignalActive_BeforeWaitState;
     FSMC_NORSRAMInitStructure.FSMC_WriteOperation = FSMC_WriteOperation_Enable;
     FSMC_NORSRAMInitStructure.FSMC_WaitSignal = FSMC_WaitSignal_Disable;
-    FSMC_NORSRAMInitStructure.FSMC_ExtendedMode = FSMC_ExtendedMode_Disable;
+    FSMC_NORSRAMInitStructure.FSMC_ExtendedMode = FSMC_ExtendedMode_Enable;
     FSMC_NORSRAMInitStructure.FSMC_WriteBurst = FSMC_WriteBurst_Disable;
     FSMC_NORSRAMInitStructure.FSMC_ReadWriteTimingStruct = &readWriteTiming;
     FSMC_NORSRAMInitStructure.FSMC_WriteTimingStruct = &readWriteTiming;

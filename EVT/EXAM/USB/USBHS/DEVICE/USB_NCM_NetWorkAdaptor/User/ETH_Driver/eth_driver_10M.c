@@ -112,8 +112,7 @@ void WCHNET_PhyPNProcess(void)
     if(ETH->MMCRGUFCR != 0)
     {
         PhyPolarityDetect = 0;
-        /* enable Filter function */
-        ETH->MACFFR &= ~(ETH_ReceiveAll_Enable | ETH_PromiscuousMode_Enable);
+        MAC_Filter_Set( 0x01 );
     }
 }
 

@@ -65,13 +65,13 @@ void mStopIfError( uint8_t iError )
 }
 
 /*********************************************************************
- * @fn      ECM_Change_MAC_Filter
+ * @fn      MAC_Filter_Set
  *
  * @brief   Change MacFliter by USB Request
  *
  * @return  none
  */
-void ECM_Change_MAC_Filter( uint8_t pac_filter )
+void MAC_Filter_Set( uint8_t pac_filter )
 {
     ETH->MACFFR |= ETH_PromiscuousMode_Enable;
     ETH->MACFFR |= ETH_ReceiveAll_Enable;

@@ -2,7 +2,7 @@
 * File Name          : ch32v30x_tim.c
 * Author             : WCH
 * Version            : V1.0.1
-* Date               : 2025/04/14
+* Date               : 2025/07/04
 * Description        : This file provides all the TIM firmware functions.
 *********************************************************************************
 * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -106,8 +106,14 @@ void TIM_DeInit(TIM_TypeDef *TIMx)
 void TIM_TimeBaseInit(TIM_TypeDef *TIMx, TIM_TimeBaseInitTypeDef *TIM_TimeBaseInitStruct)
 {
     uint16_t tmpcr1 = 0;
-
+    uint32_t temper1 = 0;
+    temper1 = ((*( uint32_t * )0x1FFFF704) & 0x000000F0) >> 4;
     tmpcr1 = TIMx->CTLR1;
+
+    if(((temper1>=4)&&(temper1<=8))&&((TIMx == TIM1) || (TIMx == TIM8) || (TIMx == TIM9) || (TIMx == TIM10)))
+    {
+        tmpcr1 |= 1<<13;
+    }
 
     if((TIMx == TIM1) || (TIMx == TIM2) || (TIMx == TIM3) || (TIMx == TIM4) ||
        (TIMx == TIM5) || (TIMx == TIM8) || (TIMx == TIM9) || (TIMx == TIM10))

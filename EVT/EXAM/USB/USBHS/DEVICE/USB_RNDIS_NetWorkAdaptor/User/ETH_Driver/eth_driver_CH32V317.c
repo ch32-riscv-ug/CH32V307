@@ -613,8 +613,8 @@ void ETH_Configuration( uint8_t *macAddr )
     ETH_InitStructure.ETH_LoopbackMode = ETH_LoopbackMode_Disable;
 
     /* Filter function configuration */
-    ETH_InitStructure.ETH_ReceiveAll = ETH_ReceiveAll_Disable;
-    ETH_InitStructure.ETH_PromiscuousMode = ETH_PromiscuousMode_Disable;
+    ETH_InitStructure.ETH_ReceiveAll = ETH_ReceiveAll_Enable;
+    ETH_InitStructure.ETH_PromiscuousMode = ETH_PromiscuousMode_Enable;
     ETH_InitStructure.ETH_BroadcastFramesReception = ETH_BroadcastFramesReception_Enable;
     ETH_InitStructure.ETH_MulticastFramesFilter = ETH_MulticastFramesFilter_Perfect;
     ETH_InitStructure.ETH_UnicastFramesFilter = ETH_UnicastFramesFilter_Perfect;
@@ -755,6 +755,7 @@ void WCHNET_ETHIsr(void)
 void ETH_Init( uint8_t *macAddr )
 {
     ETH_Configuration( macAddr );
+    MAC_Filter_Set( 0x01 );
     ETH_DMATxDescChainInit(DMATxDscrTab, MACTxBuf, ETH_TXBUFNB);
     ETH_DMARxDescChainInit(DMARxDscrTab, MACRxBuf, ETH_RXBUFNB);
     pDMARxSet = DMARxDscrTab;

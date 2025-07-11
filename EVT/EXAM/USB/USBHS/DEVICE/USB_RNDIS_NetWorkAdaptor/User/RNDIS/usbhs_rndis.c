@@ -255,7 +255,59 @@ static void _rndis_handle_set_msg( void )
     return;
 }
 
-
+/*********************************************************************
+ * @fn      MAC_Filter_Set
+ *
+ * @brief   Change MacFliter by USB Request
+ *
+ * @return  none
+ */
+void MAC_Filter_Set( uint8_t pac_filter )
+{
+    /* Promiscuous Mode */
+    if( pac_filter & DEF_PACK_PROMISCUOUS )
+    {
+        ETH->MACFFR |= ETH_PromiscuousMode_Enable;
+        ETH->MACFFR |= ETH_ReceiveAll_Enable;
+    }
+    else
+    {
+        ETH->MACFFR &= ~ETH_PromiscuousMode_Enable;
+        ETH->MACFFR &= ~ETH_ReceiveAll_Enable;
+    }
+    /* All Multicast Mode */
+    if( pac_filter & DEF_PACK_ALL_MULTICAST )
+    {
+        ETH->MACFFR |= ETH_MulticastFramesFilter_None;
+    }
+    else
+    {
+        ETH->MACFFR &= ~ETH_MulticastFramesFilter_None;
+    }
+    /* Direct mode(Unicast) */
+    if( pac_filter & DEF_PACK_DIRECTED )
+    {
+        ETH->MACFFR &= ~ETH_UnicastFramesFilter_HashTable;
+        ETH->MACFFR &= ~ETH_ReceiveAll_Enable;
+    }
+    /* Multicast Mode */
+    if( pac_filter & DEF_PACK_MULTICAST )
+    {
+        ETH->MACFFR &= ~ETH_MulticastFramesFilter_HashTable;
+        ETH->MACFFR &= ~ETH_ReceiveAll_Enable;
+    }
+    /* BroadCast Mode */
+    if( (pac_filter & DEF_PACK_BROADCASRT) == RESET )
+    {
+        ETH->MACFFR |= ETH_BroadcastFramesReception_Disable;
+        ETH->MACFFR &= ~ETH_ReceiveAll_Enable;
+    }
+    else
+    {
+        ETH->MACFFR &= ~ETH_BroadcastFramesReception_Disable;
+        ETH->MACFFR &= ~ETH_ReceiveAll_Enable;
+    }
+}
 
 /*********************************************************************
  * @fn      RNDIS_MSG_Recv

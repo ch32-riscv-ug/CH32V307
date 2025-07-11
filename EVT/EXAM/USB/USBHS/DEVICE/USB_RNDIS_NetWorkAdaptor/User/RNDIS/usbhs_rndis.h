@@ -54,6 +54,14 @@
 /* Phy Operation Definition */
 #define DEF_PHY_QUERY_TIMEOUT           20   /* Query Phy Status every 200ms, in 10ms */
 
+/******************************************************************************/
+/* pcak fliter Definitions */
+#define DEF_PACK_PROMISCUOUS            0x01
+#define DEF_PACK_ALL_MULTICAST          0x02
+#define DEF_PACK_DIRECTED               0x04
+#define DEF_PACK_BROADCASRT             0x08
+#define DEF_PACK_MULTICAST              0x10
+
 /*********************************************************************
  * MAC queue configuration
  */
@@ -94,7 +102,6 @@ extern __attribute__((__aligned__(4))) ETH_DMADESCTypeDef DMATxDscrTab[ ];      
 extern __attribute__((__aligned__(4))) uint8_t  MACRxBuf[ ];                     /* MAC receive buffer, 4-byte aligned */
 extern __attribute__((__aligned__(4))) uint8_t  MACTxBuf[ ];                     /* MAC send buffer, 4-byte aligned */
 
-
 extern rndis_state_t rndis_state;
 extern uint8_t encapsulated_buffer[ ];
 extern uint8_t RNDIS_RX_Buffer[ ];
@@ -121,6 +128,7 @@ extern void ETH_GetMacAddr( uint8_t *p );
 extern void ETH_DriverInit( uint8_t *addr );
 extern void ETH_PhyAbility_Set( void );
 extern void USBETH_Main( void );
+extern void MAC_Filter_Set( uint8_t pac_filter );
 
 /* extern from eth_driver.c */
 extern volatile uint8_t LinkSta;

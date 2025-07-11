@@ -176,8 +176,6 @@
 #define LAST_NEGO_STAT      1   //0:auto-negotiate  1:Parallel detection
 #define TURN_PN_POLARITY    (1<<1)   //0:P polarity  1:N polarity
 
-// #define ETH_TXBUFNB                             2
-// #define ETH_RXBUFNB                             4
 #define ETH_TXBUFNB                             24
 #define ETH_RXBUFNB                             36
 #define ETH_RX_BUF_SZE                          ETH_MAX_PACKET_SIZE
@@ -188,6 +186,7 @@ extern ETH_DMADESCTypeDef *DMARxDescToGet;
 extern __attribute__ ((aligned(4))) uint8_t  MACTxBuf[ETH_TXBUFNB*ETH_TX_BUF_SZE];
 extern void ETH2USB_DataRecv( void ); /* add from usbeth */
 extern void USBETH_Limit_Spd( uint8_t spd );/* add for usbeth */
+extern void MAC_Filter_Set( uint8_t pac_filter );
 
 #define PHY_PAG_SEL 0x1F
 void WCHNET_ETHIsr(void);

@@ -186,6 +186,7 @@ extern ETH_DMADESCTypeDef *DMARxDescToGet;
 extern __attribute__ ((aligned(4))) uint8_t  MACTxBuf[ETH_TXBUFNB*ETH_TX_BUF_SZE];
 extern void ETH2USB_DataRecv( void ); /* add from usbeth */
 extern void USBETH_Limit_Spd( uint8_t spd );/* add for usbeth */
+extern void MAC_Filter_Set( uint8_t pac_filter );
 
 #define PHY_PAG_SEL 0x1F
 void WCHNET_ETHIsr(void);

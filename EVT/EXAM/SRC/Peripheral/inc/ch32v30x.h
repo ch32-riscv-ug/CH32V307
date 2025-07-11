@@ -36,7 +36,7 @@
 
 /* CH32V30x Standard Peripheral Library version number */
 #define __CH32V30x_STDPERIPH_VERSION_MAIN   (0x02) /* [15:8] main version */
-#define __CH32V30x_STDPERIPH_VERSION_SUB    (0x08) /* [7:0] sub version */
+#define __CH32V30x_STDPERIPH_VERSION_SUB    (0x09) /* [7:0] sub version */
 #define __CH32V30x_STDPERIPH_VERSION        ( (__CH32V30x_STDPERIPH_VERSION_MAIN << 8)\
                                              |(__CH32V30x_STDPERIPH_VERSION_SUB << 0))
 
@@ -6511,65 +6511,65 @@ typedef struct
 /******************************************************************************/
 
 /*******************  Bit definition for DVP_CR0 register  ********************/
-#define RB_DVP_ENABLE			0x01					// RW, DVP enable
-#define RB_DVP_V_POLAR			0x02					// RW, DVP VSYNC polarity control: 1 = invert, 0 = not invert
-#define	RB_DVP_H_POLAR			0x04					// RW, DVP HSYNC polarity control: 1 = invert, 0 = not invert
-#define	RB_DVP_P_POLAR			0x08					// RW, DVP PCLK polarity control: 1 = invert, 0 = not invert
+#define RB_DVP_ENABLE		    	0x01					// RW, DVP enable
+#define RB_DVP_V_POLAR			  0x02					// RW, DVP VSYNC polarity control: 1 = invert, 0 = not invert
+#define	RB_DVP_H_POLAR			  0x04					// RW, DVP HSYNC polarity control: 1 = invert, 0 = not invert
+#define	RB_DVP_P_POLAR		  	0x08					// RW, DVP PCLK polarity control: 1 = invert, 0 = not invert
 #define RB_DVP_MSK_DAT_MOD		0x30					
-#define 	RB_DVP_D8_MOD			0x00				// RW, DVP 8bits data mode
-#define		RB_DVP_D10_MOD			0x10				// RW, DVP 10bits data mode
-#define		RB_DVP_D12_MOD			0x20				// RW, DVP 12bits data mode
-#define	RB_DVP_JPEG				0x40					// RW, DVP JPEG mode
+#define RB_DVP_D8_MOD		    	0x00			   	// RW, DVP 8bits data mode
+#define	RB_DVP_D10_MOD	  		0x10				  // RW, DVP 10bits data mode
+#define	RB_DVP_D12_MOD	  		0x20			  	// RW, DVP 12bits data mode
+#define	RB_DVP_JPEG		    		0x40					// RW, DVP JPEG mode
 
 /*******************  Bit definition for DVP_CR1 register  ********************/
-#define RB_DVP_DMA_EN			0x01					// RW, DVP dma enable
-#define RB_DVP_ALL_CLR			0x02					// RW, DVP all clear, high action
-#define	RB_DVP_RCV_CLR			0x04					// RW, DVP receive logic clear, high action
-#define RB_DVP_BUF_TOG			0x08					// RW, DVP bug toggle by software, write 1 to toggle, ignored writing 0
-#define RB_DVP_CM				0x10					// RW, DVP capture mode
-#define	RB_DVP_CROP				0x20					// RW, DVP Crop feature enable
-#define RB_DVP_FCRC				0xC0					// RW, DVP frame capture rate control: 
-#define		DVP_RATE_100P		0x00					//00 = every frame captured (100%) 
-#define		DVP_RATE_50P		0x40					//01 = every alternate frame captured (50%)
-#define		DVP_RATE_25P		0x80					//10 = one frame in four frame captured (25%)
+#define RB_DVP_DMA_EN			    0x01					// RW, DVP dma enable
+#define RB_DVP_ALL_CLR		   	0x02					// RW, DVP all clear, high action
+#define	RB_DVP_RCV_CLR		  	0x04					// RW, DVP receive logic clear, high action
+#define RB_DVP_BUF_TOG		  	0x08					// RW, DVP bug toggle by software, write 1 to toggle, ignored writing 0
+#define RB_DVP_CM				      0x10					// RW, DVP capture mode
+#define	RB_DVP_CROP		    		0x20					// RW, DVP Crop feature enable
+#define RB_DVP_FCRC			    	0xC0					// RW, DVP frame capture rate control: 
+#define	DVP_RATE_100P	      	0x00					//00 = every frame captured (100%) 
+#define	DVP_RATE_50P		      0x40					//01 = every alternate frame captured (50%)
+#define	DVP_RATE_25P		      0x80					//10 = one frame in four frame captured (25%)
 
 /*******************  Bit definition for DVP_IER register  ********************/
-#define	RB_DVP_IE_STR_FRM		0x01					// RW, DVP frame start interrupt enable
+#define	RB_DVP_IE_STR_FRM		  0x01					// RW, DVP frame start interrupt enable
 #define	RB_DVP_IE_ROW_DONE		0x02					// RW, DVP row received done interrupt enable
 #define RB_DVP_IE_FRM_DONE		0x04					// RW, DVP frame received done interrupt enable
-#define	RB_DVP_IE_FIFO_OV		0x08					// RW, DVP receive fifo overflow interrupt enable	
-#define RB_DVP_IE_STP_FRM		0x10					// RW, DVP frame stop interrupt enable				
+#define	RB_DVP_IE_FIFO_OV		  0x08					// RW, DVP receive fifo overflow interrupt enable	
+#define RB_DVP_IE_STP_FRM		  0x10					// RW, DVP frame stop interrupt enable				
 
 /*******************  Bit definition for DVP_IFR register  ********************/
-#define RB_DVP_IF_STR_FRM	    0x01				    // RW1, interrupt flag for DVP frame start
-#define RB_DVP_IF_ROW_DONE		0x02				    // RW1, interrupt flag for DVP row receive done
-#define RB_DVP_IF_FRM_DONE		0x04				    // RW1, interrupt flag for DVP frame receive done
-#define RB_DVP_IF_FIFO_OV		0x08				    // RW1, interrupt flag for DVP receive fifo overflow
-#define RB_DVP_IF_STP_FRM		0x10				    // RW1, interrupt flag for DVP frame stop
+#define RB_DVP_IF_STR_FRM	    0x01				  // RW1, interrupt flag for DVP frame start
+#define RB_DVP_IF_ROW_DONE		0x02				  // RW1, interrupt flag for DVP row receive done
+#define RB_DVP_IF_FRM_DONE		0x04				  // RW1, interrupt flag for DVP frame receive done
+#define RB_DVP_IF_FIFO_OV		  0x08				  // RW1, interrupt flag for DVP receive fifo overflow
+#define RB_DVP_IF_STP_FRM		  0x10				  // RW1, interrupt flag for DVP frame stop
 
 /*******************  Bit definition for DVP_STATUS register  ********************/
-#define RB_DVP_FIFO_RDY			0x01					// RO, DVP receive fifo ready
-#define RB_DVP_FIFO_FULL		0x02					// RO, DVP receive fifo full
-#define RB_DVP_FIFO_OV			0x04					// RO, DVP receive fifo overflow
+#define RB_DVP_FIFO_RDY		  	0x01					// RO, DVP receive fifo ready
+#define RB_DVP_FIFO_FULL		  0x02					// RO, DVP receive fifo full
+#define RB_DVP_FIFO_OV			  0x04					// RO, DVP receive fifo overflow
 #define RB_DVP_MSK_FIFO_CNT		0x70					// RO, DVP receive fifo count
 
 /*******************  Bit definition for DVP_ROW_CNT register  ********************/
-#define RB_DVP_ROW_CNT			((uint16_t)0xFF					
+#define RB_DVP_ROW_CNT			((uint16_t)0xFF)					
 
 /*******************  Bit definition for DVP_HOFFCNT register  ********************/
-#define RB_DVP_HOFFCNT			((uint16_t)0xFF					
+#define RB_DVP_HOFFCNT			((uint16_t)0xFF)					
 
 /*******************  Bit definition for DVP_VST register  ********************/
-#define RB_DVP_VST     			((uint16_t)0xFF				
+#define RB_DVP_VST     			((uint16_t)0xFF)				
 
 /*******************  Bit definition for DVP_CAPCNT register  ********************/
-#define RB_DVP_CAPCNT     	((uint16_t)0xFF				
+#define RB_DVP_CAPCNT     	((uint16_t)0xFF)				
 
 /*******************  Bit definition for DVP_VLINE register  ********************/
-#define RB_DVP_VLINE       	((uint16_t)0xFF				
+#define RB_DVP_VLINE       	((uint16_t)0xFF)				
 
 /*******************  Bit definition for DVP_DR register  ********************/
-#define RB_DVP_DR         	((uint16_t)0xFF				
+#define RB_DVP_DR         	((uint16_t)0xFF)				
 
 /******************************************************************************/
 /*                                  TKEY                                       */
