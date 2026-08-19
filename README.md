@@ -4,12 +4,12 @@
 
 ## Series
 
-| Series | Core | ISA | Flash | SRAM | Packages | Products | Official |
-|---|---|---|---|---|---|---|---|
-| **CH32V303** | QingKe V4F | RV32IMACF | 480K | - | LQFP100,LQFP48,LQFP64M | 5 | [en](https://www.wch-ic.com/products/CH32V303.html) / [zh](https://www.wch.cn/products/CH32V303.html) |
-| **CH32V305** | QingKe V4F | RV32IMACF | - | - | LQFP48,LQFP64M,QFN28,TSSOP20 | 4 | [en](https://www.wch-ic.com/products/CH32V305.html) / [zh](https://www.wch.cn/products/CH32V305.html) |
-| **CH32V307** | QingKe V4F | RV32IMACF | 480K | 64K | LQFP100,LQFP64M,QFN68 | 3 | [en](https://www.wch-ic.com/products/CH32V307.html) / [zh](https://www.wch.cn/products/CH32V307.html) |
-| **CH32V317** | QingKe V4F | RV32IMACF | 480K | 64K | LQFP100,QFN68 | 2 | [en](https://www.wch-ic.com/products/CH32V317.html) / [zh](https://www.wch.cn/products/CH32V317.html) |
+| Series | Core | ISA | Flash | SRAM | Max clock | VDD | Packages | Products | Official |
+|---|---|---|---|---|---|---|---|---|---|
+| **CH32V303** | QingKe V4F | RV32IMACF | 480K | - | 144 MHz | 2.4-3.6V | LQFP100,LQFP48,LQFP64M | 5 | [en](https://www.wch-ic.com/products/CH32V303.html) / [zh](https://www.wch.cn/products/CH32V303.html) |
+| **CH32V305** | QingKe V4F | RV32IMACF | - | - | 144 MHz | 2.4-3.6V | LQFP48,LQFP64M,QFN28,TSSOP20 | 4 | [en](https://www.wch-ic.com/products/CH32V305.html) / [zh](https://www.wch.cn/products/CH32V305.html) |
+| **CH32V307** | QingKe V4F | RV32IMACF | 480K | 64K | 144 MHz | 2.4-3.6V | LQFP100,LQFP64M,QFN68 | 3 | [en](https://www.wch-ic.com/products/CH32V307.html) / [zh](https://www.wch.cn/products/CH32V307.html) |
+| **CH32V317** | QingKe V4F | RV32IMACF | 480K | 64K | 144 MHz | 2.4-3.6V | LQFP100,QFN68 | 2 | [en](https://www.wch-ic.com/products/CH32V317.html) / [zh](https://www.wch.cn/products/CH32V317.html) |
 
 ## Debug / serial defaults
 
@@ -832,11 +832,14 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 ## Errata
 
-- DVP_D5 is mapped to PB6 by default. When bit[13]DVPEN=1 and bit[11]USBHSEN=1 of register RCC_AHBPCENR and bit[2]RB_UC_RST_SIE=0 of R8_USB_CTRL, the default mapping for DVP_D5 is changed to PB3 automatically. *(applies: CH32V303, CH32V305, CH32V307; penultimate digit of lot number > 1)*
-- FSMC_NADV default maps to PB7. When register RCC_AHBPCENR's bit[8]FSMCEN=1 and bit[11]USBHSEN=1 and R8_USB_CTRL's bit[2]RB_UC_RST_SIE=0, the default FSMC_NADV mapping is automatically changed to PD2. *(applies: CH32V303, CH32V305, CH32V307; penultimate digit of lot number > 1)*
-- I2S3_MCK is mapped to PC7 by default. The I2S3_MCK default mapping is automatically changed to PA8 if both 10M Ethernet and I2S3 functions are used. *(applies: CH32V303, CH32V305, CH32V307; penultimate digit of lot number > 2)*
-- I2S3_SD is mapped to PB5 by default. The I2S3_SD default mapping is automatically changed to PA9 if both 10M Ethernet and I2S3 functionality are used. *(applies: CH32V303, CH32V305, CH32V307; penultimate digit of lot number > 2)*
-- SDIO_D0 and SDIO_D1 are mapped to PC8 and PC9 by default. The default mapping is automatically changed to PB14 and PB15 when bit[14]ETHMACEN=1 and bit[10]SDIOEN=1 in register RCC_AHBPCENR. *(applies: CH32V303, CH32V305, CH32V307; penultimate digit of lot number > 1)*
+- DVP_D5 is mapped to PB6 by default. For matching lots, the default mapping automatically changes to PB3 when bit[13]DVPEN=1 and bit[11]USBHSEN=1 in register RCC_AHBPCENR and bit[2]RB_UC_RST_SIE=0 in R8_USB_CTRL. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 1, or 6th-to-last digit != 0)*
+- In addition to the user-selectable (192K+128K), (224K+96K), (256K+64K) and (288K+32K) FLASH/SRAM combinations, these lots add a (128K FLASH + 192K SRAM) combination. *(applies: CH32V303, CH32V305, CH32V307; 6th-to-last digit of lot number != 0 (256K FLASH + 64K SRAM products))*
+- FSMC_NADV is mapped to PB7 by default. For matching lots, the default mapping automatically changes to PD2 when bit[8]FSMCEN=1 and bit[11]USBHSEN=1 in register RCC_AHBPCENR and bit[2]RB_UC_RST_SIE=0 in R8_USB_CTRL. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 1, or 6th-to-last digit != 0)*
+- I2S3_MCK is mapped to PC7 by default. For matching lots, the default mapping automatically changes to PA8 if 10M Ethernet and I2S3 are used at the same time. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 2, or 6th-to-last digit != 0)*
+- I2S3_SD is mapped to PB5 by default. For matching lots, the default mapping automatically changes to PA9 if 10M Ethernet and I2S3 are used at the same time. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 2, or 6th-to-last digit != 0)*
+- SDIO_D0 and SDIO_D1 are mapped to PC8 and PC9 by default. For matching lots (except CH32V305GBU6), the default mapping automatically changes to PB14 and PB15 when bit[14]ETHMACEN=1 and bit[10]SDIOEN=1 in register RCC_AHBPCENR. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 1, or 6th-to-last digit != 0)*
+- SPI3_MOSI is mapped to PB5 by default. For matching lots, when Ethernet is used the I2S3 default pin functions and the SPI3 default chip-select are unavailable, and the SPI3_MOSI default mapping automatically changes to PA15. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number = 2, and 6th-to-last digit = 0)*
+- V_IO supports a minimum supply voltage of 1.2V instead of 1.8V (products without an independent V_IO supply and CH32V305GBU6 excluded). *(applies: CH32V303, CH32V305, CH32V307, CH32V317; 5th-to-last digit of lot number > 4)*
 
 ## Diagrams
 
