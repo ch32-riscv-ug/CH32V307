@@ -258,6 +258,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PE14 | I/O/A | - | - | - | - | 45 |  |
 | PE15 | I/O/A | - | - | - | - | 46 |  |
 | BOOT0 | I | 44 | 60 | 60 | 60 | 94 |  |
+| NC |  | - | - | - | - | 73 |  |
 | NRST | I | 7 | 7 | 7 | 7 | 14 |  |
 | OSC_IN | I/A | 5 | 5 | 5 | 5 | 12 | OSC |
 | OSC_OUT | O/A | 6 | 6 | 6 | 6 | 13 | OSC |
@@ -589,6 +590,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PE14 | I/O/A | - | 45 | - |  |
 | PE15 | I/O/A | - | 46 | - |  |
 | BOOT0 | I | 60 | 94 | 63 |  |
+| NC |  | - | 73 | - |  |
 | NRST | I | 7 | 14 | 7 |  |
 | OSC_IN | I/A | 5 | 12 | 5 | OSC |
 | OSC_OUT | O/A | 6 | 13 | 6 | OSC |
@@ -785,6 +787,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | MDIRP | I/O | 44 | 33 |  |
 | MDITN | I/O | 43 | 32 |  |
 | MDITP | I/O | 42 | 31 |  |
+| NC |  | 73 | - |  |
 | NRST | I | 14 | 7 |  |
 | OSC_IN | I/A | 12 | 5 | OSC |
 | OSC_OUT | O/A | 13 | 6 | OSC |
@@ -968,8 +971,6 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | CH32V307 | USART8_REMAP | PCFR2 | PCFR2:24;PCFR2:25 | 0;1;2;3 | 0 |
 | CH32V317 | CAN_REMAP | PCFR1 | PCFR1:13;PCFR1:14 | 0;1;2;3 | 0 |
 | CH32V317 | CAN2_REMAP | PCFR1 | PCFR1:22 | 0;1 | 0 |
-| CH32V317 | ETH_REMAP | PCFR1 | PCFR1:21 | 0;1 | 0 |
-| CH32V317 | FSMC_NADV_REMAP | PCFR2 | PCFR2:10 | 0;1 | 0 |
 | CH32V317 | I2C1_REMAP | PCFR1 | PCFR1:1 | 0;1 | 0 |
 | CH32V317 | SPI1_REMAP | PCFR1 | PCFR1:0 | 0;1 | 0 |
 | CH32V317 | SPI3_REMAP | PCFR1 | PCFR1:28 | 0;1 | 0 |
