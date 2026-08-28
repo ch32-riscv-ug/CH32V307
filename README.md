@@ -21,10 +21,12 @@ Where these land **without writing a remap register**. SWD is live at reset; the
 
 ## Series
 
+Flash and SRAM list every value the series has; more than one means it varies by part number, and the per-part values are in the comparison table below.
+
 | Series | Core | ISA | Flash | SRAM | Clock | VDD | Packages | Products | Official |
 |---|---|---|---|---|---|---|---|---|---|
-| **CH32V303** | QingKe V4F | RV32IMACF | - | - | 144 MHz | 2.4-3.6V | LQFP100,LQFP48,LQFP64M | 5 | [en](https://www.wch-ic.com/products/CH32V303.html) / [zh](https://www.wch.cn/products/CH32V303.html) |
-| **CH32V305** | QingKe V4F | RV32IMACF | - | - | 144 MHz | 2.4-3.6V | LQFP48,LQFP64M,QFN28,TSSOP20 | 4 | [en](https://www.wch-ic.com/products/CH32V305.html) / [zh](https://www.wch.cn/products/CH32V305.html) |
+| **CH32V303** | QingKe V4F | RV32IMACF | 128K/256K | 32K/64K | 144 MHz | 2.4-3.6V | LQFP100,LQFP48,LQFP64M | 5 | [en](https://www.wch-ic.com/products/CH32V303.html) / [zh](https://www.wch.cn/products/CH32V303.html) |
+| **CH32V305** | QingKe V4F | RV32IMACF | 128K/256K | 32K/64K | 144 MHz | 2.4-3.6V | LQFP48,LQFP64M,QFN28,TSSOP20 | 4 | [en](https://www.wch-ic.com/products/CH32V305.html) / [zh](https://www.wch.cn/products/CH32V305.html) |
 | **CH32V307** | QingKe V4F | RV32IMACF | 256K | 64K | 144 MHz | 2.4-3.6V | LQFP100,LQFP64M,QFN68 | 3 | [en](https://www.wch-ic.com/products/CH32V307.html) / [zh](https://www.wch.cn/products/CH32V307.html) |
 | **CH32V317** | QingKe V4F | RV32IMACF | 256K | 64K | 144 MHz | 2.4-3.6V | LQFP100,QFN68 | 2 | [en](https://www.wch-ic.com/products/CH32V317.html) / [zh](https://www.wch.cn/products/CH32V317.html) |
 
