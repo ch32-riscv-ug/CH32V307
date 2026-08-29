@@ -4,6 +4,8 @@
 
 *Generated from the mirror at commit [`51ea5b3`](https://github.com/ch32-riscv-ug/CH32V307/tree/51ea5b385a96523a0d80654ea1545326095c38f8) (2026-08-24). Newer PDFs may exist upstream; see Documents below.*
 
+[Choose a part](#product-comparison) &middot; [Pin viewer](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303) &middot; [Pin maps](#pin-maps--alternate-functions) &middot; [Errata](#errata) &middot; [Examples](#evt-examples) &middot; [Documents](#documents) &middot; [Address map](#address-map)
+
 ## Quick start
 
 Programming and debug: **2-wire SDI** (WCH-Link, `Serial Debug Interface`).
@@ -23,7 +25,7 @@ Where these land **without writing a remap register**. SWD is live at reset; the
 
 Flash and SRAM list every value the series has; more than one means it varies by part number, and the per-part values are in the comparison table below.
 
-| Series | Core | ISA | Flash | SRAM | Clock | VDD | Packages | Products | Official |
+| Series | Core | ISA | Flash | SRAM | Main clock | VDD | Packages | Products | Official |
 |---|---|---|---|---|---|---|---|---|---|
 | **CH32V303** | QingKe V4F | RV32IMACF | 128K/256K | 32K/64K | 144 MHz | 2.4-3.6V | LQFP100,LQFP48,LQFP64M | 5 | [en](https://www.wch-ic.com/products/CH32V303.html) / [zh](https://www.wch.cn/products/CH32V303.html) |
 | **CH32V305** | QingKe V4F | RV32IMACF | 128K/256K | 32K/64K | 144 MHz | 2.4-3.6V | LQFP48,LQFP64M,QFN28,TSSOP20 | 4 | [en](https://www.wch-ic.com/products/CH32V305.html) / [zh](https://www.wch.cn/products/CH32V305.html) |
@@ -34,13 +36,34 @@ Flash and SRAM list every value the series has; more than one means it varies by
 
 ### CH32V303 product comparison
 
-| | CH32V303&#8203;CBT6&#8203;(LQFP48) | CH32V303&#8203;RBT6&#8203;(LQFP64M) | CH32V303&#8203;RCT6&#8203;(LQFP64M) | CH32V303&#8203;RCT7&#8203;(LQFP64M) | CH32V303&#8203;VCT6&#8203;(LQFP100) |
+Only the 14 rows that differ between these 5 products; the other 11 are the same for all of them.
+
+| | [CH32V303&#8203;CBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303CBT6)&#8203;(LQFP48) | [CH32V303&#8203;RBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RBT6)&#8203;(LQFP64M) | [CH32V303&#8203;RCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RCT6)&#8203;(LQFP64M) | [CH32V303&#8203;RCT7](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RCT7)&#8203;(LQFP64M) | [CH32V303&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303VCT6)&#8203;(LQFP100) |
 |---|---|---|---|---|---|
-| **Flash** | 128K | 128K | 256K | 256K | 256K |
+| **Flash (zero-wait)** | 128K | 128K | 256K | 256K | 256K |
 | **SRAM** | 32K | 32K | 64K | 64K | 64K |
 | **GPIO** | 37 | 51 | 51 | 51 | 80 |
 | **Temperature** | -40..85C | -40..85C | -40..85C | -40..105C | -40..85C |
-| Code FLASH (bytes) | 480K | 480K | 480K | 480K | 480K |
+| Advanced-control (16-bit) | 1 | 1 | 4 | 4 | 4 |
+| General-purpose (16-bit) | 3 | 3 | 4 | 4 | 4 |
+| Basic (16-bit) | - | - | 2 | 2 | 2 |
+| ADC/TKey Channel | 10 | 16 | 16 | 16 | 16 |
+| USART/UART | 3 | 3 | 8 | 8 | 8 |
+| SPI | 2 | 2 | 3 | 3 | 3 |
+| RNG | - | - | 1 | 1 | 1 |
+| I2S | - | - | 2 | 2 | 2 |
+| SDIO | - | - | 1 | 1 | 1 |
+| FSMC | - | - | - | - | 1 |
+
+<details><summary>All 25 rows</summary>
+
+| | [CH32V303&#8203;CBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303CBT6)&#8203;(LQFP48) | [CH32V303&#8203;RBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RBT6)&#8203;(LQFP64M) | [CH32V303&#8203;RCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RCT6)&#8203;(LQFP64M) | [CH32V303&#8203;RCT7](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RCT7)&#8203;(LQFP64M) | [CH32V303&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303VCT6)&#8203;(LQFP100) |
+|---|---|---|---|---|---|
+| **Flash (zero-wait)** | 128K | 128K | 256K | 256K | 256K |
+| **SRAM** | 32K | 32K | 64K | 64K | 64K |
+| **GPIO** | 37 | 51 | 51 | 51 | 80 |
+| **Temperature** | -40..85C | -40..85C | -40..85C | -40..105C | -40..85C |
+| Code FLASH, total (bytes) | 480K | 480K | 480K | 480K | 480K |
 | Advanced-control (16-bit) | 1 | 1 | 4 | 4 | 4 |
 | General-purpose (16-bit) | 3 | 3 | 4 | 4 | 4 |
 | Timer Watchdog | 2 (WWDG + IWDG) | 2 (WWDG + IWDG) | 2 (WWDG + IWDG) | 2 (WWDG + IWDG) | 2 (WWDG + IWDG) |
@@ -62,15 +85,37 @@ Flash and SRAM list every value the series has; more than one means it varies by
 | SDIO | - | - | 1 | 1 | 1 |
 | FSMC | - | - | - | - | 1 |
 
+</details>
+
 ### CH32V305 product comparison
 
-| | CH32V305&#8203;CCT6&#8203;(LQFP48) | CH32V305&#8203;FBP6&#8203;(TSSOP20) | CH32V305&#8203;GBU6&#8203;(QFN28) | CH32V305&#8203;RBT6&#8203;(LQFP64M) |
+Only the 13 rows that differ between these 4 products; the other 12 are the same for all of them.
+
+| | [CH32V305&#8203;CCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305CCT6)&#8203;(LQFP48) | [CH32V305&#8203;FBP6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305FBP6)&#8203;(TSSOP20) | [CH32V305&#8203;GBU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305GBU6)&#8203;(QFN28) | [CH32V305&#8203;RBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305RBT6)&#8203;(LQFP64M) |
 |---|---|---|---|---|
-| **Flash** | 256K | 128K | 128K | 128K |
+| **Flash (zero-wait)** | 256K | 128K | 128K | 128K |
+| **SRAM** | 64K | 32K | 32K | 32K |
+| **GPIO** | 41 | 17 | 24 | 51 |
+| Code FLASH, total (bytes) | 480K | 224K | 224K | 480K |
+| ADC/TKey Channel | 16 | 1 | 6 | 16 |
+| DAC (Unit) | 2 | DAC2 | 2 | 2 |
+| OPA/CMP | 4 | - | OPA3 | 4 |
+| USART/UART | 5 | USART1 USART3 | USART1 USART3 UART4 UART5 UART7 | 5 |
+| SPI | 3 | SPI2 | 3 | 3 |
+| I2S | 2 | I2S2 | 2 | 2 |
+| CAN | 2 | CAN2 | CAN2 | 2 |
+| USBHD | 1 | - | - | 1 |
+| SDIO | - | - | 1 | 1 |
+
+<details><summary>All 25 rows</summary>
+
+| | [CH32V305&#8203;CCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305CCT6)&#8203;(LQFP48) | [CH32V305&#8203;FBP6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305FBP6)&#8203;(TSSOP20) | [CH32V305&#8203;GBU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305GBU6)&#8203;(QFN28) | [CH32V305&#8203;RBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305RBT6)&#8203;(LQFP64M) |
+|---|---|---|---|---|
+| **Flash (zero-wait)** | 256K | 128K | 128K | 128K |
 | **SRAM** | 64K | 32K | 32K | 32K |
 | **GPIO** | 41 | 17 | 24 | 51 |
 | **Temperature** | -40..85C | -40..85C | -40..85C | -40..85C |
-| Code FLASH (bytes) | 480K | 224K | 224K | 480K |
+| Code FLASH, total (bytes) | 480K | 224K | 224K | 480K |
 | Advanced-control (16-bit) | 4 | 4 | 4 | 4 |
 | General-purpose (16-bit) | 4 | 4 | 4 | 4 |
 | Basic (16-bit) | 2 | 2 | 2 | 2 |
@@ -92,15 +137,27 @@ Flash and SRAM list every value the series has; more than one means it varies by
 | CPU main frequency | Max: 144MHz | Max: 144MHz | Max: 144MHz | Max: 144MHz |
 | SDIO | - | - | 1 | 1 |
 
+</details>
+
 ### CH32V307 product comparison
 
-| | CH32V307&#8203;RCT6&#8203;(LQFP64M) | CH32V307&#8203;VCT6&#8203;(LQFP100) | CH32V307&#8203;WCU6&#8203;(QFN68) |
+Only the 3 rows that differ between these 3 products; the other 25 are the same for all of them.
+
+| | [CH32V307&#8203;RCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307RCT6)&#8203;(LQFP64M) | [CH32V307&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307VCT6)&#8203;(LQFP100) | [CH32V307&#8203;WCU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307WCU6)&#8203;(QFN68) |
 |---|---|---|---|
-| **Flash** | 256K | 256K | 256K |
+| **GPIO** | 51 | 80 | 54 |
+| DVP | - | 1 | - |
+| FSMC | - | 1 | - |
+
+<details><summary>All 28 rows</summary>
+
+| | [CH32V307&#8203;RCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307RCT6)&#8203;(LQFP64M) | [CH32V307&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307VCT6)&#8203;(LQFP100) | [CH32V307&#8203;WCU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307WCU6)&#8203;(QFN68) |
+|---|---|---|---|
+| **Flash (zero-wait)** | 256K | 256K | 256K |
 | **SRAM** | 64K | 64K | 64K |
 | **GPIO** | 51 | 80 | 54 |
 | **Temperature** | -40..85C | -40..85C | -40..85C |
-| Code FLASH (bytes) | 480K | 480K | 480K |
+| Code FLASH, total (bytes) | 480K | 480K | 480K |
 | Advanced-control (16-bit) | 4 | 4 | 4 |
 | General-purpose (16-bit) | 4 | 4 | 4 |
 | Basic (16-bit) | 2 | 2 | 2 |
@@ -120,22 +177,33 @@ Flash and SRAM list every value the series has; more than one means it varies by
 | SDIO | 1 | 1 | 1 |
 | USBHD | 1 | 1 | 1 |
 | USBHS (include PHY) | 1 | 1 | 1 |
-| Communication interfaces Ethernet | 1G MAC+10M PHY | 1G MAC+10M PHY | 1G MAC+10M PHY |
+| Ethernet | 1G MAC+10M PHY | 1G MAC+10M PHY | 1G MAC+10M PHY |
 | CPU main frequency | Max: 144MHz | Max: 144MHz | Max: 144MHz |
 | DVP | - | 1 | - |
 | FSMC | - | 1 | - |
 
+</details>
+
 ### CH32V317 product comparison
 
-| | CH32V317&#8203;VCT6&#8203;(LQFP100) | CH32V317&#8203;WCU6&#8203;(QFN68) |
+Only the 2 rows that differ between these 2 products; the other 25 are the same for all of them.
+
+| | [CH32V317&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317VCT6)&#8203;(LQFP100) | [CH32V317&#8203;WCU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317WCU6)&#8203;(QFN68) |
 |---|---|---|
-| **Flash** | 256K | 256K |
+| **GPIO** | 70 | 48 |
+| DVP | 1 | - |
+
+<details><summary>All 27 rows</summary>
+
+| | [CH32V317&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317VCT6)&#8203;(LQFP100) | [CH32V317&#8203;WCU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317WCU6)&#8203;(QFN68) |
+|---|---|---|
+| **Flash (zero-wait)** | 256K | 256K |
 | **SRAM** | 64K | 64K |
 | **GPIO** | 70 | 48 |
 | **Temperature** | -40..85C | -40..85C |
-| Code FLASH (bytes) | 480K | 480K |
+| Code FLASH, total (bytes) | 480K | 480K |
 | Advanced-control (16-bit)(2) | 4 | 4 |
-| General- purpose (16-bit)(2) | 4 | 4 |
+| General-purpose (16-bit)(2) | 4 | 4 |
 | Basic (16-bit) | 2 | 2 |
 | Timer Watchdog | 2 (WWDG + IWDG) | 2 (WWDG + IWDG) |
 | SysTick (64-bit) | Supported | Supported |
@@ -153,11 +221,13 @@ Flash and SRAM list every value the series has; more than one means it varies by
 | SDIO | 1 | 1 |
 | USBHD | 1 | 1 |
 | USBHS (include PHY) | 1 | 1 |
-| Communication interfaces Ethernet | MAC+10M/100M PHY | MAC+10M/100M PHY |
+| Ethernet | MAC+10M/100M PHY | MAC+10M/100M PHY |
 | DVP | 1 | - |
 | CPU main frequency | Max: 144MHz | Max: 144MHz |
 
-## Pinouts
+</details>
+
+## Packages & pinout drawings
 
 Pinout drawings are in the datasheet (chapter *Pinouts*):
 
@@ -173,11 +243,16 @@ Pinout drawings are in the datasheet (chapter *Pinouts*):
 | LQFP100 | CH32V317VCT6 | [en](https://ch32-riscv-ug.github.io/CH32V307/datasheet_en/CH32V20x_30xDS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V307/datasheet_zh/CH32V20x_30xDS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP100.png) |
 | QFN68 | CH32V317WCU6 | [en](https://ch32-riscv-ug.github.io/CH32V307/datasheet_en/CH32V20x_30xDS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V307/datasheet_zh/CH32V20x_30xDS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN68.png) |
 
-## Pin definitions
+## Pin maps & alternate functions
+
+> [!NOTE]
+> These are the **pin-table superset**: the datasheet prints one pad table for every product that shares a pinout, so a pad row does not mean this part has the peripheral. Use the product comparison table above for what a given part number contains.
 
 ### CH32V303 pin map
 
 Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303) [ADC](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=ADC) [I2C](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=I2C) [SPI](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=SPI) [SYS](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=SYS) [TIM](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=TIM) [UART](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=UART) [USB](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303&features=USB)
+
+<details><summary><b>CH32V303 pin map</b> (102 pads x 5 products)</summary>
 
 | Pin name | Type | [CH32V303&#8203;CBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303CBT6)&#8203;(LQFP48) | [CH32V303&#8203;RBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RBT6)&#8203;(LQFP64M) | [CH32V303&#8203;RCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RCT6)&#8203;(LQFP64M) | [CH32V303&#8203;RCT7](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303RCT7)&#8203;(LQFP64M) | [CH32V303&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V303VCT6)&#8203;(LQFP100) | Notes |
 |---|---|---|---|---|---|---|---|
@@ -284,6 +359,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | VSS_4 | P | - | 18 | 18 | 18 | 27 |  |
 | VSS_5 | P | - | - | - | - | 10 |  |
 
+</details>
+
 <details><summary><b>CH32V303 alternate functions</b></summary>
 
 | Pad | default | (no route stated) | remap-1 | remap-2 | remap-3 |
@@ -377,6 +454,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305) [ADC](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=ADC) [I2C](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=I2C) [SPI](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=SPI) [SYS](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=SYS) [TIM](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=TIM) [UART](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=UART) [USB](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305&features=USB)
 
+<details><summary><b>CH32V305 pin map</b> (69 pads x 4 products)</summary>
+
 | Pin name | Type | [CH32V305&#8203;CCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305CCT6)&#8203;(LQFP48) | [CH32V305&#8203;FBP6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305FBP6)&#8203;(TSSOP20) | [CH32V305&#8203;GBU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305GBU6)&#8203;(QFN28) | [CH32V305&#8203;RBT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V305RBT6)&#8203;(LQFP64M) | Notes |
 |---|---|---|---|---|---|---|
 | PA1 | I/O/A | 11 | 2 | 7 | 15 |  |
@@ -449,6 +528,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | VSS_3 | P | 47 | - | - | 63 |  |
 | VSS_4 | P | - | - | - | 18 |  |
 
+</details>
+
 <details><summary><b>CH32V305 alternate functions</b></summary>
 
 | Pad | default | (no route stated) | remap-1 | remap-2 | remap-3 |
@@ -510,6 +591,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 ### CH32V307 pin map
 
 Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307) [ADC](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=ADC) [I2C](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=I2C) [SPI](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=SPI) [SYS](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=SYS) [TIM](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=TIM) [UART](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=UART) [USB](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307&features=USB)
+
+<details><summary><b>CH32V307 pin map</b> (105 pads x 3 products)</summary>
 
 | Pin name | Type | [CH32V307&#8203;RCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307RCT6)&#8203;(LQFP64M) | [CH32V307&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307VCT6)&#8203;(LQFP100) | [CH32V307&#8203;WCU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V307WCU6)&#8203;(QFN68) | Notes |
 |---|---|---|---|---|---|
@@ -619,6 +702,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | VSS_4 | P | 18 | 27 | - |  |
 | VSS_5 | P | - | 10 | - |  |
 
+</details>
+
 <details><summary><b>CH32V307 alternate functions</b></summary>
 
 | Pad | default | (no route stated) | remap-1 | remap-2 | remap-3 |
@@ -711,6 +796,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 ### CH32V317 pin map
 
 Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317) [ADC](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=ADC) [I2C](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=I2C) [SPI](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=SPI) [SYS](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=SYS) [TIM](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=TIM) [UART](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=UART) [USB](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317&features=USB)
+
+<details><summary><b>CH32V317 pin map</b> (103 pads x 2 products)</summary>
 
 | Pin name | Type | [CH32V317&#8203;VCT6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317VCT6)&#8203;(LQFP100) | [CH32V317&#8203;WCU6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V317WCU6)&#8203;(QFN68) | Notes |
 |---|---|---|---|---|
@@ -817,6 +904,8 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | VSS_4 | P | 27 | - |  |
 | VSS_5 | P | 10 | - |  |
 | VSS_6 | P | 41 | - |  |
+
+</details>
 
 <details><summary><b>CH32V317 alternate functions</b></summary>
 
