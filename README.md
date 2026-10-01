@@ -1096,6 +1096,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 ## Errata
 
+- Only UNIID1 and UNIID2 (the low 64 bits) of the unique ID differ between chips; UNIID3 is not unique although the reference manual describes a 96-bit unique identifier. UNIID3 reads 0xFFFFFFFF on the measured V003, V006, X035 and L103 chips, and the same 0xE339E339 on a V203 and a V307. Use UNIID1|UNIID2 as the chip's unique value. *(applies: CH32L103, CH32V003, CH32V006, CH32V203, CH32V307, CH32X035; )*
 - DVP_D5 is mapped to PB6 by default. For matching lots, the default mapping automatically changes to PB3 when bit[13]DVPEN=1 and bit[11]USBHSEN=1 in register RCC_AHBPCENR and bit[2]RB_UC_RST_SIE=0 in R8_USB_CTRL. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 1, or 6th-to-last digit != 0)*
 - In addition to the user-selectable (192K+128K), (224K+96K), (256K+64K) and (288K+32K) FLASH/SRAM combinations, these lots add a (128K FLASH + 192K SRAM) combination. *(applies: CH32V303, CH32V305, CH32V307; 6th-to-last digit of lot number != 0 (256K FLASH + 64K SRAM products))*
 - FSMC_NADV is mapped to PB7 by default. For matching lots, the default mapping automatically changes to PD2 when bit[8]FSMCEN=1 and bit[11]USBHSEN=1 in register RCC_AHBPCENR and bit[2]RB_UC_RST_SIE=0 in R8_USB_CTRL. *(applies: CH32V303, CH32V305, CH32V307; 5th-to-last digit of lot number > 1, or 6th-to-last digit != 0)*
