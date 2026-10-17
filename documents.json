@@ -65,7 +65,7 @@
       "sources": {
         "zh": {
           "file_id": 356,
-          "version": "3.1",
+          "version": "3.2",
           "scope": "CH32V303CBT6, CH32V303RBT6, CH32V303RCT6, CH32V303VCT6, CH32V305FBP6, CH32V305GBU6, CH32V305CCT6, CH32V305RBT6, CH32V307RCT6, CH32V307WCU6, CH32V307VCT6, CH32V317WCU6, CH32V317VCT6"
         }
       }

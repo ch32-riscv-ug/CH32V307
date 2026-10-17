@@ -1118,7 +1118,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 |---|---|---|---|
 | CH32V20x_30xDS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V20x_30xDS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V307/datasheet_en/CH32V20x_30xDS0.PDF) v3.5 | [page](https://www.wch.cn/downloads/CH32V20x_30xDS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V307/datasheet_zh/CH32V20x_30xDS0.PDF) v3.5 |
 | CH32FV2x_V3xRM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32FV2x_V3xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V20x/datasheet_en/CH32FV2x_V3xRM.PDF) v2.5 | [page](https://www.wch.cn/downloads/CH32FV2x_V3xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V20x/datasheet_zh/CH32FV2x_V3xRM.PDF) v2.5 |
-| CH32V307EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V307EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V307/tree/main/EVT) v3.1 |
+| CH32V307EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V307EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V307/tree/main/EVT) v3.2 |
 
 ### Evaluation boards
 
