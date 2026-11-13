@@ -1,5 +1,5 @@
 
-南京沁恒微电子股份有限公司 2025.04
+南京沁恒微电子股份有限公司 2026.11
 最新资料请到我们的网站上查询
 https://wch.cn
 
@@ -39,6 +39,9 @@ https://wch.cn
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- WS2812_LED
   |      |      |      |      |      |-- WS2812_LED：通过SPI\PWM操作WS2812例程 
+  |      |      |      |      |-- WUIGUI
+  |      |      |      |      |      |-- WUI-GUI-FLASH：WUI-GUI-FLASH例程 
+  |      |      |      |      |      |-- WUI-GUI-LIVE：WUI-GUI-LIVE例程 
   |      |      |      |-- BKP
   |      |      |      |      |-- BKP：BKP例程 
   |      |      |      |-- CAN

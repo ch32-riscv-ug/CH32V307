@@ -1,5 +1,5 @@
 
-Nanjing Qinheng Microelectronics Co., Ltd. 2025.04
+Nanjing Qinheng Microelectronics Co., Ltd. 2026.11
 
 https://wch-ic.com
 
@@ -39,6 +39,9 @@ Directory
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- WS2812_LED
   |      |      |      |      |      |-- WS2812_LED：SPI\PWM Operates WS2812_LED routine 
+  |      |      |      |      |-- WUIGUI
+  |      |      |      |      |      |-- WUI-GUI-FLASH：WUI-GUI-FLASH routine 
+  |      |      |      |      |      |-- WUI-GUI-LIVE：WUI-GUI-LIVE routine 
   |      |      |      |-- BKP
   |      |      |      |      |-- BKP：BKP routine 
   |      |      |      |-- CAN
