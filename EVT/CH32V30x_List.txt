@@ -39,9 +39,6 @@ https://wch.cn
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- WS2812_LED
   |      |      |      |      |      |-- WS2812_LED：通过SPI\PWM操作WS2812例程 
-  |      |      |      |      |-- WUIGUI
-  |      |      |      |      |      |-- WUI-GUI-FLASH：WUI-GUI-FLASH例程 
-  |      |      |      |      |      |-- WUI-GUI-LIVE：WUI-GUI-LIVE例程 
   |      |      |      |-- BKP
   |      |      |      |      |-- BKP：BKP例程 
   |      |      |      |-- CAN
@@ -102,6 +99,20 @@ https://wch.cn
   |      |      |      |      |-- LCD_8bit：8bit数据总线LCD例程
   |      |      |      |-- GPIO
   |      |      |      |      |-- GPIO_Toggle：GPIO例程 
+  |      |      |      |-- GUI
+  |      |      |      |      |-- WCH-GUI-FLASH：WCH-GUI-FLASH例程(CPU占用率低) 
+  |      |      |      |      |      |--GUI_ExternalFlash: WCH-GUI-FLASH 使用外部flash的例程
+  |      |      |      |      |      |--GUI_Onflash：WCH-GUI-FLASH 使用内部flash的例程
+  |      |      |      |      |      |--WCHGUI_Lib: WCH-GUI-FLASH 的核心库(CPU占用率低)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--片外FLASH下载操作说明.pdf
+  |      |      |      |      |      |      |--沁恒WCHGUI软件说明文档.pdf
+  |      |      |      |      |-- WCH-GUI-LIVE：WCH-GUI-LIVE例程(节省存储资源) 
+  |      |      |      |      |      |--DEMO1: WCH-GUI-LIVE的基础例程
+  |      |      |      |      |      |--DEMO2: WCH-GUI-LIVE的复杂例程
+  |      |      |      |      |      |--WVUI_Lib: WCH-GUI-LIVE 的核心库(节省存储资源)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--WCH-GUI-Live库参考手册.pdf 
   |      |      |      |-- HarmonyOS
   |      |      |      |      |-- LiteOS_m：HarmonyOS移植例程
   |      |      |      |-- I2C

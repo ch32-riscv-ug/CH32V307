@@ -39,9 +39,6 @@ Directory
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- WS2812_LED
   |      |      |      |      |      |-- WS2812_LED：SPI\PWM Operates WS2812_LED routine 
-  |      |      |      |      |-- WUIGUI
-  |      |      |      |      |      |-- WUI-GUI-FLASH：WUI-GUI-FLASH routine 
-  |      |      |      |      |      |-- WUI-GUI-LIVE：WUI-GUI-LIVE routine 
   |      |      |      |-- BKP
   |      |      |      |      |-- BKP：BKP routine 
   |      |      |      |-- CAN
@@ -102,6 +99,20 @@ Directory
   |      |      |      |      |-- LCD_8bit：8 bit data bus LCD routine
   |      |      |      |-- GPIO
   |      |      |      |      |-- GPIO_Toggle:GPIO routines 
+  |      |      |      |-- GUI
+  |      |      |      |      |-- WCH-GUI-FLASH：WCH-GUI-FLASH routine(Low CPU usage) 
+  |      |      |      |      |      |--GUI_ExternalFlash: WCH-GUI-FLASH use external flash routine
+  |      |      |      |      |      |--GUI_Onflash：WCH-GUI-FLASH use internal flash routine
+  |      |      |      |      |      |--WCHGUI_Lib: WCH-GUI-FLASH core library (with low CPU usage)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--Instructions for downloading external FLASH.pdf
+  |      |      |      |      |      |      |--WCHGUI software documentation.pdf
+  |      |      |      |      |-- WCH-GUI-LIVE：WCH-GUI-LIVE routine(Save storage resources)
+  |      |      |      |      |      |--DEMO1: WCH-GUI-LIVE basic routine
+  |      |      |      |      |      |--DEMO2: WCH-GUI-LIVE complex routine
+  |      |      |      |      |      |--WVUI_Lib: WCH-GUI-LIVE core library(with save storage resources)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--WCH-GUI-Live library Reference Manual.pdf 
   |      |      |      |-- HarmonyOS
   |      |      |      |      |-- LiteOS_m：HarmonyOS migration routine
   |      |      |      |-- I2C
